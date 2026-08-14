@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veloura | Luxury Salon & Spa Mumbai</title>
+  <meta name="description" content="Experience high-end beauty, hair, skin, nail and relaxation treatments at Veloura, Mumbai's premium boutique luxury salon and spa ritual space.">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Sticky Elegant Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#home" class="logo">VELOURA</a>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#intro" class="nav-link">Experience</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#artists" class="nav-link">Artists</a></li>
+        <li><a href="#reviews" class="nav-link">Reviews</a></li>
+        <li><a href="#booking" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#booking" class="btn">Book Appointment</a>
+      </div>
+      <button class="mobile-toggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Cinematic Hero Landing -->
+  <section id="home" class="hero">
+    <div class="hero-video-container">
+      <img src="assets/images/makeup.jpg" alt="Veloura luxury hair styling moments">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-logo">VELOURA</h1>
+      <p class="hero-tagline">Beauty, beautifully yours.</p>
+      <div class="hero-services-list">Hair &bull; Skin &bull; Nails &bull; Spa</div>
+      <div class="hero-buttons">
+        <a href="#booking" class="btn btn-primary">Book An Appointment</a>
+        <a href="#services" class="btn">Explore Services</a>
+      </div>
+    </div>
+    <div class="scroll-indicator" onclick="document.getElementById('intro').scrollIntoView();">
+      <span>Scroll</span>
+      <svg viewBox="0 0 24 24">
+        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  <section id="intro" class="intro-section section-padding fade-in">
+    <div class="intro-content">
+      <span class="section-subtitle">Intimate & Approachable</span>
+      <h2 class="intro-headline">More than a salon.<br>Your little escape.</h2>
+      <p class="intro-text">
+        Some days you come for the haircut. Some days you come because you need an hour where nobody expects anything from you.
+      </p>
+      <p class="intro-text">
+        At Veloura, beauty is personal. Our stylists remember your preferences, understand your lifestyle, listen to your stories, and make your appointment feel like time reserved entirely for you.
+      </p>
+      <p class="intro-text-highlight">
+        "Relax, unwind, feel taken care of, and leave feeling lighter."
+      </p>
+      <a href="#services" class="btn">Explore The Rituals</a>
+    </div>
+    <div class="intro-image-container">
+      <img src="assets/images/salon.jpg" alt="Luxury warm interior styling space of Veloura Mumbai">
+    </div>
+  </section>
+
+  <!-- Service Discovery Tabs -->
+  <section id="services" class="services-section section-padding fade-in">
+    <div class="text-center" style="margin-bottom: 50px;">
+      <span class="section-subtitle">Carefully Curated</span>
+      <h2 class="section-title">Discover Our Treatments</h2>
+    </div>
+
+    <div class="services-tabs-container">
+      <button class="tab-btn active" data-tab="hair">Hair</button>
+      <button class="tab-btn" data-tab="skin">Face & Skin</button>
+      <button class="tab-btn" data-tab="brows">Brows & Lashes</button>
+      <button class="tab-btn" data-tab="nails">Nails</button>
+      <button class="tab-btn" data-tab="wax">Waxing</button>
+      <button class="tab-btn" data-tab="spa">Spa & Body</button>
+      <button class="tab-btn" data-tab="bridal">Bridal & Occasions</button>
+    </div>
+
+    <div class="services-grid-container">
+      <!-- Hair Panel -->
+      <div class="services-panel active" id="hair">
+        <div class="services-list">
+          <div class="service-item">
+            <span class="service-name">Women's Styling Haircut</span>
+            <span class="service-price">₹1,499</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Men's Haircut & Grooming</span>
+            <span class="service-price">₹799</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Glossy Blow Dry & Styling</span>
+            <span class="service-price">₹599</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Deep Nourishing Hair Spa</span>
+            <span class="service-price">₹1,299</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Global Luxury Colouring</span>
+            <span class="service-price">₹3,499</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Balayage / Ombré Highlights</span>
+            <span class="service-price">₹4,999</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Signature Keratin / Smoothing</span>
+            <span class="service-price">₹4,499</span>
+          </div>
+        </div>
+        <div class="services-image-column">
+          <img src="assets/images/haircut.jpg" alt="Haircut styling at Veloura">
+        </div>
+      </div>
+
+      <!-- Face & Skin Panel -->
+      <div class="services-panel" id="skin">
+        <div class="services-list">
+          <div class="service-item">
+            <span class="service-name">Hydrating Facial Therapy</span>
+            <span class="service-price">₹1,999</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Brightening Facial Rituality</span>
+            <span class="service-price">₹2,499</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Anti-Ageing Face Ritual</span>
+            <span class="service-price">₹3,200</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">De-Tan Treatment</span>
+            <span class="service-price">₹899</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Deep-Cleansing Skin Clean-Up</span>
+            <span class="service-price">₹1,199</span>
+          </div>
+        </div>
+        <div class="services-image-column">
+          <img src="assets/images/bridal.jpg" alt="Indian bridal makeup and skincare at Veloura">
+        </div>
+      </div>
+
+      <!-- Brows Panel -->
+      <div class="services-panel" id="brows">
+        <div class="services-list">
+          <div class="service-item">
+            <span class="service-name">Eyebrow Threading</span>
+            <span class="service-price">₹100</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Eyebrow Lamination</span>
+            <span class="service-price">₹1,499</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Brow Shading & Tinting</span>
+            <span class="service-price">₹799</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Keratin Lash Lift & Nourish</span>
+            <span class="service-price">₹2,199</span>
+          </div>
+        </div>
+        <div class="services-image-column">
+          <img src="assets/images/makeup.jpg" alt="Brows and lashes detail">
+        </div>
+      </div>
+
+      <!-- Nails Panel -->
+      <div class="services-panel" id="nails">
+        <div class="services-list">
+          <div class="service-item">
+            <span class="service-name">Classic Manicure</span>
+            <span class="service-price">₹699</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Gel Manicure</span>
+            <span class="service-price">₹1,299</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Luxury Spa Pedicure</span>
+            <span class="service-price">₹1,199</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Aesthetic Gel Extensions</span>
+            <span class="service-price">₹2,499</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Custom Hand-Painted Nail Art</span>
+            <span class="service-price">₹799</span>
+          </div>
+        </div>
+        <div class="services-image-column">
+          <img src="assets/images/nails.jpg" alt="Premium nails manicure">
+        </div>
+      </div>
+
+      <!-- Waxing Panel -->
+      <div class="services-panel" id="wax">
+        <div class="services-list">
+          <div class="service-item">
+            <span class="service-name">Full Arms Waxing</span>
+            <span class="service-price">₹450</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Full Legs Waxing</span>
+            <span class="service-price">₹650</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Full Body Premium Wax</span>
+            <span class="service-price">₹2,999</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Brazilian Wax</span>
+            <span class="service-price">₹1,499</span>
+          </div>
+        </div>
+        <div class="services-image-column">
+          <img src="assets/images/waxing.jpg" alt="Premium waxing treatment close-up at Veloura">
+        </div>
+      </div>
+
+      <!-- Spa Panel -->
+      <div class="services-panel" id="spa">
+        <div class="services-list">
+          <div class="service-item">
+            <span class="service-name">Relaxing Head Massage (30 mins)</span>
+            <span class="service-price">₹899</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Soothing Back & Shoulder Ritual</span>
+            <span class="service-price">₹1,499</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Full Body Swedish Massage</span>
+            <span class="service-price">₹2,899</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Signature Veloura Body Polish</span>
+            <span class="service-price">₹3,499</span>
+          </div>
+        </div>
+        <div class="services-image-column">
+          <img src="assets/images/massage.jpg" alt="Spa and relaxation space">
+        </div>
+      </div>
+
+      <!-- Bridal Panel -->
+      <div class="services-panel" id="bridal">
+        <div class="services-list">
+          <div class="service-item">
+            <span class="service-name">Signature Bridal Makeup & Styling</span>
+            <span class="service-price">₹14,999</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Engagement/Reception Look</span>
+            <span class="service-price">₹8,999</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Elegant Saree Draping & Styling</span>
+            <span class="service-price">₹1,499</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Pre-Bridal Luxury Package</span>
+            <span class="service-price">₹9,999</span>
+          </div>
+        </div>
+        <div class="services-image-column">
+          <img src="assets/images/colouring.jpg" alt="Bridal makeup styling">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clear Editorial Pricing -->
+  <section id="pricing" class="pricing-section section-padding fade-in">
+    <div class="text-center" style="margin-bottom: 50px;">
+      <span class="section-subtitle">Straightforward Values</span>
+      <h2 class="section-title">The Pricing</h2>
+      <p class="pricing-intro">
+        We believe in upfront pricing. Every styling ritual is tailored to your hair type, texture and length. Below are the basic starting values.
+      </p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Hair Artistry</h3>
+        <div class="service-item"><span class="service-name">Stylist Haircut</span><span class="service-price">From ₹799</span></div>
+        <div class="service-item"><span class="service-name">Blow Dry & Volume</span><span class="service-price">From ₹599</span></div>
+        <div class="service-item"><span class="service-name">Nourishing Hair Spa</span><span class="service-price">From ₹1,299</span></div>
+        <div class="service-item"><span class="service-name">Global Luxury Colour</span><span class="service-price">From ₹1,999</span></div>
+        <div class="service-item"><span class="service-name">Balayage & Hair Paint</span><span class="service-price">From ₹4,999</span></div>
+        <div class="service-item"><span class="service-name">Keratin Deep Therapy</span><span class="service-price">From ₹4,499</span></div>
+      </div>
+      
+      <div class="pricing-card">
+        <h3>Skin & Wellness</h3>
+        <div class="service-item"><span class="service-name">Brightening Facial</span><span class="service-price">From ₹1,499</span></div>
+        <div class="service-item"><span class="service-name">Hydrating Facial</span><span class="service-price">From ₹1,999</span></div>
+        <div class="service-item"><span class="service-name">Eyebrow Lamination</span><span class="service-price">₹1,499</span></div>
+        <div class="service-item"><span class="service-name">Eyebrow + Upper Lip</span><span class="service-price">₹160</span></div>
+        <div class="service-item"><span class="service-name">Gel Manicure</span><span class="service-price">₹1,299</span></div>
+        <div class="service-item"><span class="service-name">Luxurious Pedicure</span><span class="service-price">₹899</span></div>
+      </div>
+    </div>
+    
+    <p class="pricing-note">
+      * Final pricing may vary depending on hair length, density, specialist selection, and product usage during customized consultation.
+    </p>
+  </section>
+
+  <!-- The Veloura Experience Story -->
+  <section class="experience-section section-padding fade-in">
+    <div class="text-center">
+      <span class="section-subtitle">Our Philosophy</span>
+      <h2 class="section-title" style="color: var(--color-ivory);">Come for the appointment.<br>Stay for the feeling.</h2>
+    </div>
+
+    <div class="experience-grid">
+      <div class="experience-card">
+        <span class="experience-number">01</span>
+        <h3>Sit Back</h3>
+        <p>No rushing between client sessions. Your reserved time is entirely yours to rest and recharge.</p>
+      </div>
+      <div class="experience-card">
+        <span class="experience-number">02</span>
+        <h3>Talk It Out</h3>
+        <p>Hair struggles, lifestyle stories, or absolute quiet. We follow your mood and energy level.</p>
+      </div>
+      <div class="experience-card">
+        <span class="experience-number">03</span>
+        <h3>Feel Understood</h3>
+        <p>Your artist remembers exactly what you like, what you dislike, and how you design your bangs.</p>
+      </div>
+      <div class="experience-card">
+        <span class="experience-number">04</span>
+        <h3>Leave Lighter</h3>
+        <p>Styling makes you look better. But sometimes the feeling of being pampered does the real magic.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Editorial Timeline Ritual -->
+  <section class="ritual-section section-padding fade-in">
+    <div class="text-center">
+      <span class="section-subtitle">The Journey</span>
+      <h2 class="section-title">A Veloura Appointment</h2>
+    </div>
+
+    <div class="ritual-timeline">
+      <div class="ritual-step">
+        <div class="ritual-step-badge">01</div>
+        <div class="ritual-step-content">
+          <h3 class="ritual-step-title">The Consultation</h3>
+          <p class="ritual-step-desc">Tell us your inspiration, discuss what didn't work last time, or show us your curated Pinterest board over warm coffee.</p>
+        </div>
+      </div>
+      <div class="ritual-step">
+        <div class="ritual-step-badge">02</div>
+        <div class="ritual-step-content">
+          <h3 class="ritual-step-title">The Wellness Wash</h3>
+          <p class="ritual-step-desc">Enjoy a deep scalp massage and refreshing wash using curated luxury botanicals customized for you.</p>
+        </div>
+      </div>
+      <div class="ritual-step">
+        <div class="ritual-step-badge">03</div>
+        <div class="ritual-step-content">
+          <h3 class="ritual-step-title">The Artistry</h3>
+          <p class="ritual-step-desc">Relax while our specialist styling artists perform the precision cuts, color paints, or nails design.</p>
+        </div>
+      </div>
+      <div class="ritual-step">
+        <div class="ritual-step-badge">04</div>
+        <div class="ritual-step-content">
+          <h3 class="ritual-step-title">The Final Reveal</h3>
+          <p class="ritual-step-desc">The mirror moment. Styling touches, styling advice, and stepping back out into Mumbai feeling refreshed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before & After Comparison -->
+  <section class="before-after-section section-padding fade-in">
+    <div class="text-center">
+      <span class="section-subtitle">Real Results</span>
+      <h2 class="section-title">The Transformations</h2>
+    </div>
+
+    <div class="before-after-container">
+      <div class="before-after-slider-img img-after"></div>
+      <div class="before-after-slider-img img-before"></div>
+      <div class="before-after-slider-bar">
+        <div class="before-after-handle">↔</div>
+      </div>
+      <span class="before-after-label label-before">Before Treatment</span>
+      <span class="before-after-label label-after">After Keratin</span>
+    </div>
+  </section>
+
+  <!-- Editorial Gallery Grid -->
+  <section id="gallery" class="gallery-section section-padding fade-in">
+    <div class="text-center">
+      <span class="section-subtitle">Visual Journal</span>
+      <h2 class="section-title">Inspiration & Space</h2>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="assets/images/ambience_1.png" alt="Veloura salon ambience">
+        <div class="gallery-item-overlay">
+          <span class="gallery-caption">The Veloura Space</span>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/hair_before_after.png" alt="Hair transformation results">
+        <div class="gallery-item-overlay">
+          <span class="gallery-caption">Hair Transformation</span>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/facial.jpg" alt="Luxury facial treatment at Veloura">
+        <div class="gallery-item-overlay">
+          <span class="gallery-caption">Glow Ritual</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet the Artists -->
+  <section id="artists" class="artists-section section-padding fade-in">
+    <div class="text-center">
+      <span class="section-subtitle">The Experts</span>
+      <h2 class="section-title">Meet The Artists</h2>
+    </div>
+
+    <div class="artists-grid">
+      <div class="artist-card">
+        <div class="artist-img-wrapper">
+          <img src="assets/images/haircut.jpg" alt="Senior stylist Priya at Veloura">
+        </div>
+        <div class="artist-info">
+          <h3 class="artist-name">Priya Sharma</h3>
+          <span class="artist-role">Master Hair Artist</span>
+          <p class="artist-desc">Known for effortless editorial layers, volume blowouts and organic movement styling.</p>
+          <a href="#booking" class="btn btn-gold">Book Priya</a>
+        </div>
+      </div>
+
+      <div class="artist-card">
+        <div class="artist-img-wrapper">
+          <img src="assets/images/colouring.jpg" alt="Colour specialist Rohan at Veloura">
+        </div>
+        <div class="artist-info">
+          <h3 class="artist-name">Rohan Mehta</h3>
+          <span class="artist-role">Colour Specialist</span>
+          <p class="artist-desc">Your expert for sun-kissed balayage, dynamic dimension tones, and healthy transformations.</p>
+          <a href="#booking" class="btn btn-gold">Book Rohan</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Reviews -->
+  <section id="reviews" class="reviews-section section-padding fade-in">
+    <div class="text-center">
+      <span class="section-subtitle">Real Voice</span>
+      <h2 class="section-title">Stories From Our Guests</h2>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"I came in for a blow dry and somehow ended up talking to my stylist about my entire week. Hair looked insane too. Truly feels like a sanctuary."</p>
+        <span class="review-author">— Aanya S.</span>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"They actually listened when I said I didn't want my hair cut too short. That alone deserves five stars. The team is warm and incredibly skilled."</p>
+        <span class="review-author">— Rhea K.</span>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"My brow lamination turned out so natural. Cozy atmosphere, fresh coffee, and brilliant attention to detail."</p>
+        <span class="review-author">— Meera J.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Membership Self-Care Club -->
+  <section class="membership-section section-padding fade-in">
+    <div class="text-center">
+      <span class="section-subtitle">Self-Care Club</span>
+      <h2 class="section-title" style="color: var(--color-ivory);">The Veloura Club</h2>
+    </div>
+
+    <div class="membership-grid">
+      <div class="membership-card">
+        <h3>Glow Club</h3>
+        <p class="membership-price">₹3,999 / month</p>
+        <ul class="membership-benefits">
+          <li>1 Hydrating Facial or Clean-Up</li>
+          <li>1 Gel Manicure & Pedicure</li>
+          <li>15% off any additional services</li>
+          <li>Priority weekend scheduling</li>
+        </ul>
+        <a href="#booking" class="btn btn-gold">Join Club</a>
+      </div>
+
+      <div class="membership-card">
+        <h3>Hair Ritual</h3>
+        <p class="membership-price">₹4,999 / month</p>
+        <ul class="membership-benefits">
+          <li>2 Glossy Blow Dry sessions</li>
+          <li>1 Nourishing Scalp Spa treatment</li>
+          <li>Complimentary hair glaze check</li>
+          <li>Priority booking for master stylists</li>
+        </ul>
+        <a href="#booking" class="btn btn-gold">Join Club</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Booking Experience -->
+  <section id="booking" class="booking-section section-padding fade-in">
+    <div class="booking-info-panel">
+      <span class="section-subtitle">Reserve Time</span>
+      <h2>Start Your Ritual</h2>
+      <p class="booking-info-text">
+        Ready to disappear for an hour or two? Complete the form to reserve your custom styling experience. Our reception desk will connect with you via WhatsApp or phone call to finalize your slot.
+      </p>
+
+      <div class="booking-contact-methods">
+        <div class="contact-method">
+          <div class="contact-icon">☏</div>
+          <div class="contact-details">
+            <h4>Call Us Directly</h4>
+            <p>+91 98200 12345</p>
+          </div>
+        </div>
+        <div class="contact-method">
+          <div class="contact-icon">💬</div>
+          <div class="contact-details">
+            <h4>WhatsApp Us</h4>
+            <p>+91 98200 12345</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="booking-form-wrapper">
+      <form class="booking-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" required placeholder="e.g., Ananya Sen">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" required placeholder="e.g., +91 98200 XXXXX">
+        </div>
+        <div class="form-group">
+          <label for="service">Select Ritual</label>
+          <select id="service">
+            <option>First Available / Consultation</option>
+            <option>Hair Styling & Cut</option>
+            <option>Nail Extensions & Art</option>
+            <option>Brows & Lashes</option>
+            <option>Face & Skin Therapy</option>
+            <option>Relaxation Body Spa</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="stylist">Preferred Artist</label>
+          <select id="stylist">
+            <option>First Available Artist</option>
+            <option>Priya Sharma (Hair)</option>
+            <option>Rohan Mehta (Color)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="date">Preferred Date</label>
+          <input type="date" id="date" required>
+        </div>
+        <div class="form-group">
+          <label for="time">Preferred Time</label>
+          <input type="time" id="time" required>
+        </div>
+        <div class="form-group form-group-full">
+          <label for="notes">Special Notes (Optional)</label>
+          <textarea id="notes" rows="4" placeholder="Any preferences, style thoughts, or concerns..."></textarea>
+        </div>
+        <div class="form-group form-group-full">
+          <button type="submit" class="btn btn-primary">Book My Appointment</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Location Map Details -->
+  <section class="location-section section-padding fade-in">
+    <div class="location-details">
+      <span class="section-subtitle">Visit Us</span>
+      <h2>Veloura Mumbai</h2>
+      
+      <div class="location-info-block" style="margin-top: 30px;">
+        <h3>Address</h3>
+        <p>Ground Floor, Elegant Chambers, Linking Road, Bandra West, Mumbai, Maharashtra 400050</p>
+      </div>
+
+      <div class="location-info-block">
+        <h3>Hours</h3>
+        <p>Mon &ndash; Sun: 10:00 AM &ndash; 9:00 PM</p>
+      </div>
+
+      <div class="location-info-block">
+        <h3>Enquiries</h3>
+        <p>hello@velourabeauty.com</p>
+      </div>
+
+      <a href="https://maps.google.com" target="_blank" class="btn">Get Directions</a>
+    </div>
+    <div class="map-wrapper">
+      <!-- High-end elegant Bandra West Mumbai map simulation -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.2123512211997!2d72.83392437604677!3d19.05333175266858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c91130392c07%3A0x11776550686de0f8!2sLinking%20Rd%2C%20Bandra%20West%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1787860000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- Premium Large Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h2>VELOURA</h2>
+        <p>Beauty, beautifully yours. Bandra West, Mumbai.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#intro">Experience</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Enquiries</h4>
+        <div class="footer-contact-details">
+          <span>Phone: +91 98200 12345</span>
+          <span>WhatsApp: +91 98200 12345</span>
+          <span>Email: hello@velourabeauty.com</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Aesthetics</h4>
+        <p style="font-size: 0.85rem; font-weight: 300; color: rgba(253, 251, 247, 0.65);">
+          Warm studios, luxury wash rituals, and custom styling setups built around you.
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Veloura Salon & Spa. All Rights Reserved.</span>
+      <span>Designed with care.</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
