@@ -122,4 +122,141 @@ document.addEventListener('DOMContentLoaded', () => {
       bookingForm.reset();
     });
   }
+
+  // ============================================
+  // Ritual Journey Section — Interactive Cards
+  // ============================================
+  const ritualCards = document.querySelectorAll('.ritual-card');
+  const ritualDots = document.querySelectorAll('.ritual-dot');
+  const ritualFill = document.getElementById('ritualFill');
+  const ritualPrev = document.getElementById('ritualPrev');
+  const ritualNext = document.getElementById('ritualNext');
+
+  if (ritualCards.length) {
+    let activeIdx = 0; // 0-indexed active step
+
+    const TOTAL = ritualCards.length;
+
+    const setActiveStep = (idx) => {
+      activeIdx = Math.max(0, Math.min(idx, TOTAL - 1));
+
+      // Update cards
+      ritualCards.forEach((card, i) => {
+        card.classList.toggle('active', i === activeIdx);
+      });
+
+      // Update dots
+      ritualDots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === activeIdx);
+      });
+
+      // Update progress bar (25% per step, 1-indexed)
+      if (ritualFill) {
+        const pct = Math.round(((activeIdx + 1) / TOTAL) * 100);
+        ritualFill.style.width = `${pct}%`;
+      }
+    };
+
+    // Arrow buttons
+    if (ritualPrev) {
+      ritualPrev.addEventListener('click', () => setActiveStep(activeIdx - 1));
+    }
+    if (ritualNext) {
+      ritualNext.addEventListener('click', () => setActiveStep(activeIdx + 1));
+    }
+
+    // Dot clicks
+    ritualDots.forEach((dot, i) => {
+      dot.addEventListener('click', () => setActiveStep(i));
+    });
+
+    // Card clicks
+    ritualCards.forEach((card, i) => {
+      card.addEventListener('click', () => setActiveStep(i));
+    });
+
+    // Keyboard navigation when section is in focus
+    document.addEventListener('keydown', (e) => {
+      const section = document.getElementById('journey');
+      if (!section) return;
+      const rect = section.getBoundingClientRect();
+      const inView = rect.top < window.innerHeight && rect.bottom > 0;
+      if (!inView) return;
+      if (e.key === 'ArrowRight') setActiveStep(activeIdx + 1);
+      if (e.key === 'ArrowLeft') setActiveStep(activeIdx - 1);
+    });
+
+    // Auto-advance on first load with stagger
+    setTimeout(() => setActiveStep(0), 300);
+  }
+
+  // ============================================
+  // Mobile Gallery Tap & Slide Carousel Logic
+  // ============================================
+  const galleryBento = document.getElementById('galleryBento');
+  const galleryDots = document.querySelectorAll('.g-dot');
+  const galleryItems = document.querySelectorAll('.gb-item');
+
+  if (galleryBento && galleryItems.length) {
+    // Tap on image card to slide to next image on mobile
+    galleryItems.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        // Only trigger slide behavior on mobile/tablet viewports where carousel is active
+        if (window.innerWidth <= 768) {
+          const nextIndex = (index + 1) % galleryItems.length;
+          const targetItem = galleryItems[nextIndex];
+          if (targetItem) {
+            targetItem.scrollIntoView({
+              behavior: 'smooth',
+              block: 'nearest',
+              inline: 'center'
+            });
+          }
+        }
+      });
+    });
+
+    // Dot click navigation
+    galleryDots.forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        const idx = parseInt(dot.getAttribute('data-index'), 10);
+        if (!isNaN(idx) && galleryItems[idx]) {
+          galleryItems[idx].scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+            inline: 'center'
+          });
+        }
+      });
+    });
+
+    // Update active dot on scroll
+    let scrollTimeout;
+    galleryBento.addEventListener('scroll', () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        if (window.innerWidth > 768) return;
+        const bentoRect = galleryBento.getBoundingClientRect();
+        const bentoCenter = bentoRect.left + bentoRect.width / 2;
+
+        let closestIndex = 0;
+        let minDistance = Infinity;
+
+        galleryItems.forEach((item, i) => {
+          const itemRect = item.getBoundingClientRect();
+          const itemCenter = itemRect.left + itemRect.width / 2;
+          const dist = Math.abs(bentoCenter - itemCenter);
+          if (dist < minDistance) {
+            minDistance = dist;
+            closestIndex = i;
+          }
+        });
+
+        galleryDots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === closestIndex);
+        });
+      }, 50);
+    }, { passive: true });
+  }
 });
+

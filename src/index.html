@@ -37,7 +37,14 @@
   <!-- Cinematic Hero Landing -->
   <section id="home" class="hero">
     <div class="hero-video-container">
-      <img src="assets/images/makeup.jpg" alt="Veloura luxury hair styling moments">
+      <!-- Desktop landscape video -->
+      <video class="hero-vid hero-vid-desktop" autoplay muted loop playsinline preload="auto">
+        <source src="assets/videos/salon_hero_landscape.mp4" type="video/mp4">
+      </video>
+      <!-- Mobile vertical video -->
+      <video class="hero-vid hero-vid-mobile" autoplay muted loop playsinline preload="auto">
+        <source src="assets/videos/salon_hero_vertical.mp4" type="video/mp4">
+      </video>
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -158,7 +165,7 @@
           </div>
         </div>
         <div class="services-image-column">
-          <img src="assets/images/bridal.jpg" alt="Indian bridal makeup and skincare at Veloura">
+          <img src="assets/images/skin.jpg" alt="Face and skin treatment at Veloura">
         </div>
       </div>
 
@@ -237,7 +244,7 @@
           </div>
         </div>
         <div class="services-image-column">
-          <img src="assets/images/waxing.jpg" alt="Premium waxing treatment close-up at Veloura">
+          <img src="assets/images/waxing_real.jpg" alt="Luxury waxing treatment at Veloura">
         </div>
       </div>
 
@@ -287,7 +294,7 @@
           </div>
         </div>
         <div class="services-image-column">
-          <img src="assets/images/colouring.jpg" alt="Bridal makeup styling">
+          <img src="assets/images/bride_real.jpg" alt="Stunning Indian bridal look at Veloura">
         </div>
       </div>
     </div>
@@ -361,43 +368,60 @@
     </div>
   </section>
 
-  <!-- Editorial Timeline Ritual -->
-  <section class="ritual-section section-padding fade-in">
-    <div class="text-center">
-      <span class="section-subtitle">The Journey</span>
-      <h2 class="section-title">A Veloura Appointment</h2>
+  <!-- Immersive Appointment Journey -->
+  <section class="ritual-section fade-in" id="journey">
+
+    <div class="ritual-header">
+      <span class="ritual-eyebrow">The Journey</span>
+      <h2 class="ritual-main-title">A Veloura Appointment</h2>
+      <p class="ritual-subtitle">From the first hello to the final reveal — every moment curated, every detail cherished.</p>
     </div>
 
-    <div class="ritual-timeline">
-      <div class="ritual-step">
+    <!-- Connector line + 4 steps -->
+    <div class="ritual-steps-wrap">
+
+      <div class="ritual-step-item" data-step="0">
         <div class="ritual-step-badge">01</div>
-        <div class="ritual-step-content">
+        <div class="ritual-step-body">
+          <p class="ritual-step-label">~15 minutes</p>
           <h3 class="ritual-step-title">The Consultation</h3>
-          <p class="ritual-step-desc">Tell us your inspiration, discuss what didn't work last time, or show us your curated Pinterest board over warm coffee.</p>
+          <p class="ritual-step-desc">Tell us your vision. Show us your Pinterest board. Share what didn't work before. We listen over warm coffee — no rushing.</p>
         </div>
       </div>
-      <div class="ritual-step">
+
+      <div class="ritual-step-item" data-step="1">
         <div class="ritual-step-badge">02</div>
-        <div class="ritual-step-content">
+        <div class="ritual-step-body">
+          <p class="ritual-step-label">~20 minutes</p>
           <h3 class="ritual-step-title">The Wellness Wash</h3>
-          <p class="ritual-step-desc">Enjoy a deep scalp massage and refreshing wash using curated luxury botanicals customized for you.</p>
+          <p class="ritual-step-desc">A deep scalp massage paired with botanical luxury shampoo. Not just a wash — your first exhale of the whole appointment.</p>
         </div>
       </div>
-      <div class="ritual-step">
+
+      <div class="ritual-step-item" data-step="2">
         <div class="ritual-step-badge">03</div>
-        <div class="ritual-step-content">
+        <div class="ritual-step-body">
+          <p class="ritual-step-label">~45–90 minutes</p>
           <h3 class="ritual-step-title">The Artistry</h3>
-          <p class="ritual-step-desc">Relax while our specialist styling artists perform the precision cuts, color paints, or nails design.</p>
+          <p class="ritual-step-desc">Precision cuts, hand-painted balayage, or intricate nail designs — your artist works with complete focus, zero distractions.</p>
         </div>
       </div>
-      <div class="ritual-step">
+
+      <div class="ritual-step-item" data-step="3">
         <div class="ritual-step-badge">04</div>
-        <div class="ritual-step-content">
+        <div class="ritual-step-body">
+          <p class="ritual-step-label">~10 minutes</p>
           <h3 class="ritual-step-title">The Final Reveal</h3>
-          <p class="ritual-step-desc">The mirror moment. Styling touches, styling advice, and stepping back out into Mumbai feeling refreshed.</p>
+          <p class="ritual-step-desc">The mirror moment. Touch-ups, finish sprays, expert aftercare tips. Step out into Mumbai feeling completely renewed.</p>
         </div>
       </div>
+
+    </div><!-- end steps -->
+
+    <div class="ritual-cta-row">
+      <a href="#booking" class="btn btn-primary">Begin Your Ritual</a>
     </div>
+
   </section>
 
   <!-- Before & After Comparison -->
@@ -407,14 +431,8 @@
       <h2 class="section-title">The Transformations</h2>
     </div>
 
-    <div class="before-after-container">
-      <div class="before-after-slider-img img-after"></div>
-      <div class="before-after-slider-img img-before"></div>
-      <div class="before-after-slider-bar">
-        <div class="before-after-handle">↔</div>
-      </div>
-      <span class="before-after-label label-before">Before Treatment</span>
-      <span class="before-after-label label-after">After Keratin</span>
+    <div class="transformation-display-container">
+      <img src="assets/images/hair_transformation_real.png" alt="Veloura Hair Transformation Before & After" class="transformation-landscape-img">
     </div>
   </section>
 
@@ -425,24 +443,60 @@
       <h2 class="section-title">Inspiration & Space</h2>
     </div>
 
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <img src="assets/images/ambience_1.png" alt="Veloura salon ambience">
-        <div class="gallery-item-overlay">
-          <span class="gallery-caption">The Veloura Space</span>
-        </div>
+    <div class="gallery-bento" id="galleryBento">
+      <!-- Row 1: 1 tall + 2 portrait -->
+      <div class="gb-item gb-tall" data-index="0">
+        <img src="assets/images/new_bride.jpg" alt="Veloura Indian Bridal Artistry">
+        <div class="gallery-item-overlay"><span class="gallery-caption">Bridal Artistry</span></div>
       </div>
-      <div class="gallery-item">
-        <img src="assets/images/hair_before_after.png" alt="Hair transformation results">
-        <div class="gallery-item-overlay">
-          <span class="gallery-caption">Hair Transformation</span>
-        </div>
+      <div class="gb-item" data-index="1">
+        <img src="assets/images/new_eyes.jpg" alt="Dramatic editorial eye makeup">
+        <div class="gallery-item-overlay"><span class="gallery-caption">Dramatic Eyes</span></div>
       </div>
-      <div class="gallery-item">
-        <img src="assets/images/facial.jpg" alt="Luxury facial treatment at Veloura">
-        <div class="gallery-item-overlay">
-          <span class="gallery-caption">Glow Ritual</span>
-        </div>
+      <div class="gb-item" data-index="2">
+        <img src="assets/images/new_nails.jpg" alt="Signature nail artistry">
+        <div class="gallery-item-overlay"><span class="gallery-caption">Nail Artistry</span></div>
+      </div>
+
+      <!-- Row 2: 2 portrait items -->
+      <div class="gb-item" data-index="3">
+        <img src="assets/images/new_hairwash.jpg" alt="Veloura Wellness Wash Ritual">
+        <div class="gallery-item-overlay"><span class="gallery-caption">Wellness Wash</span></div>
+      </div>
+      <div class="gb-item" data-index="4">
+        <img src="assets/images/new_haircut.jpg" alt="Precision haircutting and styling">
+        <div class="gallery-item-overlay"><span class="gallery-caption">Precision Cut</span></div>
+      </div>
+      
+      <!-- Row 3: 3 portrait items -->
+      <div class="gb-item" data-index="5">
+        <img src="assets/images/new_makeup.jpg" alt="Makeup palette artistry">
+        <div class="gallery-item-overlay"><span class="gallery-caption">Makeup Artistry</span></div>
+      </div>
+      <div class="gb-item" data-index="6">
+        <img src="assets/images/styling.jpg" alt="Editorial hair blowout styling">
+        <div class="gallery-item-overlay"><span class="gallery-caption">Glossy Blowout</span></div>
+      </div>
+      <div class="gb-item" data-index="7">
+        <img src="assets/images/new_skincare.jpg" alt="Veloura facial treatment and skincare massage">
+        <div class="gallery-item-overlay"><span class="gallery-caption">Skincare Ritual</span></div>
+      </div>
+    </div>
+
+    <!-- Mobile Gallery Controls & Hint -->
+    <div class="gallery-mobile-controls">
+      <div class="gallery-mobile-hint">
+        <span class="hint-sparkle">✦</span> Tap image or swipe to browse
+      </div>
+      <div class="gallery-dots" id="galleryDots">
+        <span class="g-dot active" data-index="0"></span>
+        <span class="g-dot" data-index="1"></span>
+        <span class="g-dot" data-index="2"></span>
+        <span class="g-dot" data-index="3"></span>
+        <span class="g-dot" data-index="4"></span>
+        <span class="g-dot" data-index="5"></span>
+        <span class="g-dot" data-index="6"></span>
+        <span class="g-dot" data-index="7"></span>
       </div>
     </div>
   </section>
@@ -538,6 +592,18 @@
         </ul>
         <a href="#booking" class="btn btn-gold">Join Club</a>
       </div>
+
+      <div class="membership-card">
+        <h3>Silk Club</h3>
+        <p class="membership-price">₹2,999 / month</p>
+        <ul class="membership-benefits">
+          <li>1 Full Body Waxing session</li>
+          <li>Expert Threading & Brow Shaping</li>
+          <li>Soothing post-wax care treatment</li>
+          <li>15% off any additional services</li>
+        </ul>
+        <a href="#booking" class="btn btn-gold">Join Club</a>
+      </div>
     </div>
   </section>
 
@@ -624,7 +690,7 @@
       
       <div class="location-info-block" style="margin-top: 30px;">
         <h3>Address</h3>
-        <p>Ground Floor, Elegant Chambers, Linking Road, Bandra West, Mumbai, Maharashtra 400050</p>
+        <p>Ground Floor, Elegant Chambers, Juhu Tara Road, Juhu, Mumbai, Maharashtra 400049</p>
       </div>
 
       <div class="location-info-block">
@@ -640,8 +706,8 @@
       <a href="https://maps.google.com" target="_blank" class="btn">Get Directions</a>
     </div>
     <div class="map-wrapper">
-      <!-- High-end elegant Bandra West Mumbai map simulation -->
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.2123512211997!2d72.83392437604677!3d19.05333175266858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c91130392c07%3A0x11776550686de0f8!2sLinking%20Rd%2C%20Bandra%20West%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1787860000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+      <!-- High-end elegant Juhu Mumbai map simulation -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.1234567890123!2d72.82592437604677!3d19.10333175266858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9b000000000%3A0x0000000000000000!2sJuhu%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1787860000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
     </div>
   </section>
 
@@ -650,7 +716,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <h2>VELOURA</h2>
-        <p>Beauty, beautifully yours. Bandra West, Mumbai.</p>
+        <p>Beauty, beautifully yours. Juhu, Mumbai.</p>
       </div>
       <div class="footer-col">
         <h4>Navigation</h4>
