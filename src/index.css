@@ -2102,44 +2102,51 @@ footer {
     font-size: 0.88rem;
   }
 
-  /* 3. Our Philosophy — Spacious elongated horizontal card layout */
+  /* 3. Our Philosophy — Generously sized 2x2 Square Grid with Equal Heights */
   .experience-grid {
-    grid-template-columns: 1fr !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: 14px;
     margin-top: 30px;
+    align-items: stretch;
   }
 
   .experience-card {
-    padding: 22px 20px;
-    border-radius: 16px;
+    padding: 24px 18px;
+    border-radius: 18px;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 18px;
-    background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 210px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   }
 
   .experience-number {
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: var(--color-gold-light);
-    margin-bottom: 0;
+    margin-bottom: 12px;
     line-height: 1;
-    flex-shrink: 0;
-    min-width: 42px;
+    font-family: var(--font-serif);
+    font-weight: 500;
+    display: block;
   }
 
   .experience-card h3 {
     font-size: 1.15rem;
-    margin-bottom: 6px;
-    letter-spacing: 0.03em;
+    margin-bottom: 8px;
+    letter-spacing: 0.02em;
     color: var(--color-ivory);
+    font-weight: 500;
   }
 
   .experience-card p {
-    font-size: 0.88rem;
-    line-height: 1.55;
+    font-size: 0.83rem;
+    line-height: 1.5;
     color: rgba(253, 251, 247, 0.8);
+    margin: 0;
   }
 
   /* 4. A Veloura Appointment — Spacious, vertical connected timeline */
