@@ -1898,7 +1898,7 @@ footer {
 @media(max-width: 768px) {
   /* Global section & typography scaling */
   .section-padding {
-    padding: 65px 6%;
+    padding: 70px 6%;
   }
 
   .section-title {
@@ -1924,7 +1924,7 @@ footer {
   }
 
   .nav-cta {
-    display: none; /* Handled gracefully via mobile menu */
+    display: none;
   }
 
   /* Hero / Landing Screen Mobile */
@@ -1985,34 +1985,39 @@ footer {
     transform: scale(0.85);
   }
 
-  /* Intro Section */
+  /* 1. Intro Section — Gentle, elegant breathing room */
   .intro-section {
-    gap: 30px;
+    gap: 36px;
   }
 
   .intro-headline {
-    font-size: 1.85rem;
+    font-size: 2rem;
     line-height: 1.25;
+    margin-bottom: 16px;
   }
 
   .intro-text {
-    font-size: 0.9rem;
-    line-height: 1.65;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    margin-bottom: 14px;
+    color: rgba(26, 18, 14, 0.85);
   }
 
   .intro-text-highlight {
     font-size: 1.05rem;
-    padding-left: 15px;
-    margin: 20px 0;
+    line-height: 1.6;
+    padding-left: 16px;
+    margin: 22px 0 26px;
+    border-left: 2px solid var(--color-gold);
   }
 
   .intro-image-container {
-    padding-bottom: 65%;
-    min-height: 240px;
-    border-radius: 16px;
+    padding-bottom: 70%;
+    min-height: 260px;
+    border-radius: 18px;
   }
 
-  /* Services discovery horizontal scroll & compact panels */
+  /* 2. Services Discovery — Square-friendly image framing with top focus */
   .services-section {
     padding-bottom: 60px;
   }
@@ -2026,7 +2031,7 @@ footer {
     justify-content: flex-start;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    margin-bottom: 25px;
+    margin-bottom: 22px;
   }
 
   .services-tabs-container::-webkit-scrollbar {
@@ -2043,27 +2048,37 @@ footer {
 
   .services-panel {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 26px;
     margin-top: 20px;
   }
 
   .services-image-column {
-    height: 220px;
-    min-height: 220px;
-    border-radius: 16px;
+    height: 290px;
+    min-height: 290px;
+    border-radius: 18px;
     order: -1;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .services-image-column img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    border-radius: 18px;
   }
 
   .service-item {
-    padding: 10px 0;
+    padding: 11px 0;
   }
 
   .service-name {
-    font-size: 0.92rem;
+    font-size: 0.94rem;
   }
 
   .service-price {
-    font-size: 0.92rem;
+    font-size: 0.94rem;
   }
 
   /* Pricing Cards on Mobile */
@@ -2087,103 +2102,134 @@ footer {
     font-size: 0.88rem;
   }
 
-  /* Our Philosophy — Compact 2x2 Grid on Mobile */
+  /* 3. Our Philosophy — Spacious elongated horizontal card layout */
   .experience-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 10px;
-    margin-top: 25px;
+    grid-template-columns: 1fr !important;
+    gap: 14px;
+    margin-top: 30px;
   }
 
   .experience-card {
-    padding: 18px 14px;
-    border-radius: 14px;
-    min-height: 150px;
+    padding: 22px 20px;
+    border-radius: 16px;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 18px;
     background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .experience-number {
-    font-size: 1.5rem;
-    margin-bottom: 4px;
+    font-size: 2.2rem;
+    color: var(--color-gold-light);
+    margin-bottom: 0;
     line-height: 1;
+    flex-shrink: 0;
+    min-width: 42px;
   }
 
   .experience-card h3 {
-    font-size: 0.98rem;
-    margin-bottom: 4px;
-    letter-spacing: 0.02em;
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+    letter-spacing: 0.03em;
+    color: var(--color-ivory);
   }
 
   .experience-card p {
-    font-size: 0.78rem;
-    line-height: 1.4;
-    color: rgba(253, 251, 247, 0.75);
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: rgba(253, 251, 247, 0.8);
   }
 
-  /* Appointment Journey on Mobile */
+  /* 4. A Veloura Appointment — Spacious, vertical connected timeline */
   .ritual-section {
-    padding: 60px 0 50px;
+    padding: 75px 0 65px;
   }
 
   .ritual-header {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     padding: 0 20px;
   }
 
   .ritual-main-title {
     font-size: 2.1rem;
+    line-height: 1.2;
+    margin-bottom: 12px;
   }
 
   .ritual-subtitle {
-    font-size: 0.88rem;
-    line-height: 1.55;
+    font-size: 0.9rem;
+    line-height: 1.6;
   }
 
   .ritual-steps-wrap {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 32px;
     padding: 0 20px;
+    position: relative;
   }
 
   .ritual-steps-wrap::before {
     display: none;
   }
 
+  .ritual-steps-wrap::after {
+    content: '';
+    position: absolute;
+    top: 24px;
+    bottom: 24px;
+    left: calc(20px + 23px);
+    width: 2px;
+    background: linear-gradient(to bottom, #BC9354 0%, #E8C97A 50%, #BC9354 100%);
+    z-index: 1;
+  }
+
   .ritual-step-item {
     flex-direction: row;
     align-items: flex-start;
-    gap: 16px;
+    gap: 20px;
     padding: 0;
+    position: relative;
+    z-index: 2;
   }
 
   .ritual-step-badge {
-    width: 44px;
-    height: 44px;
-    font-size: 0.95rem;
-    margin-bottom: 0;
-    margin-top: 2px;
+    width: 46px;
+    height: 46px;
+    font-size: 1rem;
+    margin: 0;
     flex-shrink: 0;
+    box-shadow: 0 0 0 5px #1C110D, 0 0 0 7px rgba(188, 147, 84, 0.35);
+  }
+
+  .ritual-step-body {
+    padding-top: 2px;
   }
 
   .ritual-step-label {
-    font-size: 0.68rem;
-    margin-bottom: 4px;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    margin-bottom: 6px;
+    color: #BC9354;
+    font-weight: 600;
   }
 
   .ritual-step-title {
-    font-size: 1.15rem;
-    margin-bottom: 4px;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    line-height: 1.25;
+    color: #FAF6EF;
   }
 
   .ritual-step-desc {
-    font-size: 0.82rem;
-    line-height: 1.5;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #A69482;
   }
 
   .ritual-cta-row {
-    margin-top: 35px;
+    margin-top: 45px;
   }
 
   /* Transformations Landscape Image */
@@ -2192,9 +2238,7 @@ footer {
     border-radius: 16px;
   }
 
-  /* ========================================================
-     GALLERY: Mobile Touch & Tap-to-Slide Horizontal Carousel
-     ======================================================== */
+  /* Gallery: Mobile Touch & Tap-to-Slide Horizontal Carousel */
   .gallery-section {
     overflow: hidden;
     padding-left: 0;
@@ -2366,39 +2410,89 @@ footer {
     text-align: center;
   }
 
-  /* Booking & Contact on Mobile */
+  /* 5. Start Your Ritual (Booking & Form on Mobile) — Tailored luxury layout */
   .booking-section {
-    gap: 30px;
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
   .booking-info-panel h2 {
-    font-size: 1.9rem;
-    margin-bottom: 12px;
+    font-size: 2.1rem;
+    margin-bottom: 14px;
+    line-height: 1.2;
   }
 
   .booking-info-text {
-    font-size: 0.88rem;
-    margin-bottom: 25px;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 28px;
   }
 
   .booking-contact-methods {
-    gap: 15px;
+    gap: 16px;
+    margin-bottom: 10px;
+  }
+
+  .contact-method {
+    gap: 16px;
+  }
+
+  .contact-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  .contact-details h4 {
+    font-size: 0.75rem;
+    margin-bottom: 2px;
+  }
+
+  .contact-details p {
+    font-size: 1.05rem;
+  }
+
+  .booking-form-wrapper {
+    padding: 28px 20px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-subtle);
+    border: 1px solid var(--color-beige);
   }
 
   .booking-form {
     grid-template-columns: 1fr;
-    padding: 24px 18px;
-    border-radius: 18px;
-    gap: 14px;
+    gap: 16px;
   }
 
   .form-group-full {
     grid-column: span 1;
   }
 
-  .form-input {
-    padding: 12px 16px;
-    font-size: 0.88rem;
+  .form-group {
+    gap: 6px;
+  }
+
+  .form-group label {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 13px 15px;
+    font-size: 0.92rem;
+    border-radius: 10px;
+    border: 1px solid var(--color-taupe);
+  }
+
+  .booking-form .btn {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 0.82rem;
+    text-align: center;
+    margin-top: 8px;
   }
 
   /* Location Section */
@@ -2476,4 +2570,5 @@ footer {
     font-size: 0.8rem;
   }
 }
+
 
